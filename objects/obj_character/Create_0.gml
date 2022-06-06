@@ -4,7 +4,9 @@ mspd = 3
 col = mspd + 1
 
 image_speed = 0.2;
-orig_xscale = image_xscale
+
+lay_id = layer_get_id("Collision")
+map_id = layer_tilemap_get_id(lay_id)
 
 key_left_pressed = keyboard_check(ord("A"))
 key_right_pressed = keyboard_check(ord("D"))
