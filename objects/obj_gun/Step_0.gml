@@ -1,3 +1,4 @@
+
 /// direção da arma
 dir = point_direction(x, y, mouse_x, mouse_y)
 image_angle = dir
@@ -27,9 +28,9 @@ if (mouse_check_button(mb_left)) && (firing_delay < 0) && (ammo > 0){
 	bulletSpawnY = y + lengthdir_y(gunLength,image_angle + gun_direction * sign(image_yscale))
 	sprite_index = gun_shooting_strip9
 	
-	instance_create_layer(x,y,"Gun", obj_shell)
+	instance_create_layer(x,y,"Instances", obj_shell)
 	
-	with (instance_create_layer(bulletSpawnX, bulletSpawnY, "Bullet", obj_bullet)) {
+	with (instance_create_layer(bulletSpawnX, bulletSpawnY, "Instances", obj_bullet)) {
 		speed = 25;
 		direction = other.image_angle + random_range(-4,4)
 		image_angle = direction

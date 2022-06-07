@@ -18,6 +18,7 @@ if keyboard_check(ord("S")) & place_free(x, y+col){
 }
 */
 
+
 //colisão
 if (key_left_pressed == 1) {
 	var left_Top = tilemap_get_at_pixel(map_id, bbox_left-mspd, bbox_top);
@@ -83,5 +84,4 @@ if x < mouse_x{
 } else {
 	image_xscale = - resize
 }
-
 
